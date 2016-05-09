@@ -4,12 +4,10 @@ function Map(posts) {
 }
 
 Map.prototype.find_a_person = function(name) {
-  return ["I met Or A. at Chabad house Bangkok", "We found Or A. R.I.P at Langtang valley"];
-  };
-Map.prototype.find_a_person = function(name) {
-
-  return [];
-  };
-
-
+var post=
+    this._posts.filter(
+    function( s ) { return s.indexOf(name) !== -1; });
+return post;
+};
+  
 module.exports = Map;
