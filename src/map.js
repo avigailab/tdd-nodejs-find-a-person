@@ -10,7 +10,11 @@ var post=
 return post;
 };
 Map.prototype.find_a_person_location = function(name) {
-	return true;
+	var post=
+    this._posts.filter(
+    function( s ) { return s.indexOf(name) !== -1; });
+	return post.length!==0;
+
 };
   
 module.exports = Map;
