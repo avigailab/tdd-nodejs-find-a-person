@@ -9,5 +9,8 @@ var post=
     function( s ) { return s.indexOf(name) !== -1; });
 return post;
 };
+Map.prototype.find_a_person_location = function(name) {
+	return true;
+};
   
 module.exports = Map;
