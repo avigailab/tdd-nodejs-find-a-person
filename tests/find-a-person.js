@@ -46,7 +46,7 @@ describe('Find a person (location) 2', function() {
   });
 });
 describe('Check Map', function() {
-  it('Given a person name, return if posts (of a map) containing location (in any of a post fields)', function() {
+  it('return if of a map is valid', function() {
     var map = new Map (["I met Or A. at Chabad house Bangkok", "We found Or A. R.I.P at Langtang valley", "avigail at"]);
     var ans = map.check_map();
     expect(ans).to.be.eql(false);
