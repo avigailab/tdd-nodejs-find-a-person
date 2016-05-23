@@ -17,29 +17,24 @@ Map.prototype.find_a_person_location = function(name) {
 };
 Map.prototype.check_map = function() {
 	var places=["Arad","Chabad house Bangkok","Langtang valley"];
-	var names=["avigail","Or A."];
+	var names=["avigail","Or A.","r"];
 	var my_posts=[];
+	var flag;
 	var posts=this._posts;
 	names.forEach(function(name) {
 	flag=false;
 	posts.forEach(function(post) {
-		if(post.indexOf(name)!== -1 && !flag)
+		if(post.indexOf(name)!== -1)
 			flag=true;
 		else
-			my_posts+=post;	
+			if(flag)
+			   return false;	
 		});
 	});
-	/*my_posts.forEach(function(mypost) {
-	places.forEach(function(place) {
-		if(mypost.indexOf(place)!== -1)
-			count++;
-	if(count>1)
-		return false;
-		});
-	});*/
-if(my_posts.length==0)
+
+//if(my_posts.length==0)
 	return true;
-return false;
+
 };
   
 module.exports = Map;

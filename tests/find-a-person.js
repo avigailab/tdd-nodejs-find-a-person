@@ -46,12 +46,20 @@ describe('Find a person (location) 2', function() {
   });
 });
 describe('Check Map', function() {
-  it('return if of a map is valid', function() {
+  it('return if of a map is valid 1', function() {
     var map = new Map (["I met Or A. at Chabad house Bangkok", "We found Or A. R.I.P at Langtang valley", "avigail at"]);
     var ans = map.check_map();
-    expect(ans).to.be.eql(false);
+    expect(ans).to.be.eql(true);
   });
 });
+describe('Check Map 2', function() {
+  it('return if of a map is valid 2', function() {
+    var map = new Map (["I met r at Chabad house Bangkok", "We found Or A. R.I.P at Chabad house Bangkok", "avigail at"]);
+    var ans = map.check_map();
+    expect(ans).to.be.eql(true);
+  });
+});
+
 
 
 
