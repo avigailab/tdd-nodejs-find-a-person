@@ -45,6 +45,14 @@ describe('Find a person (location) 2', function() {
     expect(ans).to.be.eql(false);
   });
 });
+describe('Check Map', function() {
+  it('Given a person name, return if posts (of a map) containing location (in any of a post fields)', function() {
+    var map = new Map (["I met Or A. at Chabad house Bangkok", "We found Or A. R.I.P at Langtang valley", "avigail at"]);
+    var ans = map.check_map();
+    expect(ans).to.be.eql(false);
+  });
+});
+
 
 
 
